@@ -5,7 +5,7 @@ def fibonacci_even_terms_sum(num):
 
     To use:
     >>> fibonacci_even_terms_sum(10)
-    19 
+    10 
     '''
     # Son and father are the terminology used to refer to, respectively, the previous and the next number in the Fibonacci sequence
     son = 1
