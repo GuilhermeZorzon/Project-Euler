@@ -1,16 +1,27 @@
-def n_prime(n):
-    pr_test= 2
-    pr_num = 1
-    while (pr_num < n):
-        pr_test += 1
-        isprime = True
-        for i in range(2, pr_test):
-            if(pr_test % i == 0):
-                isprime = False
-        if(isprime == True):
-            print 
-            pr_num += 1
+def find_n_prime(n):
+    ''' (int) -> int
+
+    Given n, returns the n° prime number
+
+    To use:
+    >>> find_n_prime(1)
+    2
+
+    >>> find_n_prime(4)
+    7
+    '''
+
+    prime_test= 2
+    prime_num = 1
+    while (prime_num < n):
+        prime_test += 1
+        is_prime = True
+        for i in range(2, prime_test):
+            if(prime_test % i == 0):
+                is_prime = False
+        if(is_prime == True): 
+            prime_num += 1
     
-    return pr_test
+    return prime_test
     
         

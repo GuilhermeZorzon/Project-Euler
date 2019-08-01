@@ -1,30 +1,38 @@
-def sum_prime():
-    # O(n²)
-    sumpr = 2
+def find_sum_prime():
+    ''' () -> int
+
+    Finds the sum of all the prime numbers below 2.000.000
+    '''
+    # O(nÂ²)
+    sum_prime = 2
     for i in range(3, 2000000):
-        ispr = True
+        is_prime = True
         for j in range(2, i):
             if(i % j == 0):
-                ispr = False
-        if(ispr == True):
-            sumpr += i
+                is_prime = False
+        if(is_prime == True):
+            sum_prime += i
             
-    return sumpr
+    return sum_prime
 
-def sieve_erastotenes(n):
+def sieve_of_erastotenes(n):
+    ''' (int) -> int
+
+    Finds the sum of all the prime numbers below n using the
+    mathematical algorithm "sieve of Erastotenes"
+    '''
     # O(n)
-    sump = 0
-     
-    prime = [True for i in range(n+1)] 
+    sum_prime = 0
+    prime = [True for i in range(n + 1)] 
     p = 2
     while (p * p <= n): 
         if (prime[p] == True): 
-            for i in range(p * p, n+1, p): 
+            for i in range(p * p, n + 1, p): 
                 prime[i] = False
         p += 1
       
     for p in range(2, n): 
         if prime[p]: 
-            sump += p
+            sum_prime += p
             
-    return sump
+    return sum_prime
